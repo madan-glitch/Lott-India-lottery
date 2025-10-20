@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lott India Lottery</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <img src="assets/logo.png" alt="Lott India Logo" class="logo" />
+    <h1>Welcome to Lott India Lottery</h1>
+    <p>Win a cute Shih Tzu Puppy! 🐶</p>
+  </header>
+
+  <!-- REGISTRATION FORM -->
+  <section class="form-section">
+    <h2>Register to Buy Ticket</h2>
+    <form id="lotteryForm">
+      <input type="text" placeholder="Full Name" name="name" required />
+      <input type="tel" placeholder="Mobile Number" name="mobile" required />
+      <input type="text" placeholder="Address" name="address" required />
+      <input type="email" placeholder="Gmail ID" name="email" required />
+      <button type="submit">Register & Buy Ticket</button>
+    </form>
+  </section>
+
+  <!-- TICKET DETAILS -->
+  <section class="ticket-info">
+    <p><strong>Ticket Price:</strong> ₹150</p>
+    <p><strong>Tickets Left:</strong> <span id="ticketsLeft">200</span></p>
+  </section>
+
+  <!-- PAYMENT MODAL -->
+  <div id="paymentModal" class="modal">
+    <div class="modal-content">
+      <h3>Terms & Conditions</h3>
+      <ul>
+        <li>Ticket price is non-refundable.</li>
+        <li>Only 200 tickets are available.</li>
+        <li>Each person can purchase one ticket only.</li>
+        <li>Winner will be announced in the WhatsApp group.</li>
+        <li>Prize (Shih Tzu puppy) will be delivered to the provided address.</li>
+        <li>Make sure your contact details are correct.</li>
+      </ul>
+      <label><input type="checkbox" id="acceptTerms" /> I accept the terms and conditions.</label>
+      <button id="proceedPayment">Proceed to Payment</button>
+    </div>
+  </div>
+
+  <!-- PAYMENT SCANNER -->
+  <div id="scannerSection" class="scanner">
+    <h3>Scan to Pay ₹150</h3>
+    <img src="assets/scanner.jpg" alt="Payment QR" />
+    <button id="downloadTicket">Download Ticket PDF</button>
+    <a href="https://chat.whatsapp.com/YOUR-GROUP-LINK" id="whatsappLink" target="_blank">Join WhatsApp Group</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Lott India Lottery. All rights reserved.</p>
+    <small>
+      This lottery is organized for entertainment purposes. By participating, you agree to our terms and conditions.
+    </small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
